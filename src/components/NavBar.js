@@ -1,7 +1,6 @@
 import { NavLink} from "react-router-dom";
-import "./NavBar.css";
-
-function NavBar() {
+import "./NavBar.css"
+function NavBar({ logout }) {
 
   return (
     <nav>
@@ -17,8 +16,10 @@ function NavBar() {
       >
         About
       </NavLink>
+   {/* Add a button to log out */}
+      <button onClick={logout}>Logout</button>
     </nav>
   );
-}
+};
 
 export default NavBar;
